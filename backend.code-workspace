@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../eventos/apps/backend/prisma"
+		}
+	],
+	"settings": {}
+}

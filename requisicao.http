@@ -1,0 +1,52 @@
+GET http://localhost:4000/eventos/5e25282b-cde5-45ff-9436-c4320d7c2f6f
+###
+GET http://localhost:4000/eventos/validar/inauguracao-loja-estrela/53ae44ec-30fb-4e5a-9b0b-a9fbedd8e3c1
+###
+GET http://localhost:4000/eventos
+
+###
+POST http://localhost:4000/eventos/acessar
+Content-Type: application/json
+
+{
+    "id": "53ae44ec-30fb-4e5a-9b0b-a9fbedd8e3c1",
+    "senha": "estrela2024"
+}
+###
+POST http://localhost:4000/eventos/inauguracao-loja-estrela/convidado
+Content-Type: application/json
+
+{
+    "id": "f7f5279c-e271-49e8-b1b2-b2d413f3044",
+    "nome": "Hendryl",
+    "email": "hendrylmr@outlook.com",
+    "confirmado": true,
+    "possuiAcompanhantes": true,
+    "qtdeAcompanhantes": 10
+}
+
+
+###
+POST http://localhost:4000/eventos
+Content-Type: application/json
+
+{
+    "alias": "Semana-formacao-dev",
+    "nome":"Evento semana Formação DEV",
+    "data": "2025-12-31T23:59:59",
+    "local": "São Paulo",
+    "descricao":"Evento tecnologia",
+    "senha": "familia2024",
+    "imagem": "https://edusoft.com.br/wp-content/uploads/2022/12/Qual-a-importancia-da-Tecnologia-para-a-Educacao.jpeg.avif",
+    "imagemBackground": "https://t2.tudocdn.net/143914?w=646&h=284",
+    "publicoEsperado": 100,
+    "convidados": [
+        {
+        "nome":"Hendryl",
+        "email":"hendrylmr@outlook.com",
+        "confirmado":true,
+        "possuiAcompanhantes":true,
+        "qtdeAcompanhantes":10
+        }
+    ]
+}
