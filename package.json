@@ -1,11 +1,13 @@
 {
   "name": "apps",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "scripts": {
     "dev": "run-p packages:* apps:*",
     "apps:frontend": "cd apps/frontend && npm run dev",
     "apps:backend": "cd apps/backend && npm run dev",
+    "-apps:mobile": "cd apps/mobile && npm run android",
     "test": "echo \"Error: no test specified\" && exit 1",
     "packages:core": "cd packages/core && npm run dev"
   },
