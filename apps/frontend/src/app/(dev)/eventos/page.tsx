@@ -1,12 +1,32 @@
-import { eventos } from "core";
+"use client";
+import { Evento, eventos } from "core";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import QRCode from "react-qr-code";
 
 export default function PaginaEventos() {
+  console.log(eventos);
+
+  const [listaEventos, setListaEventos] = useState<Evento[]>([]);
+
+  const getEventos = async () => {
+    try {
+      const response = await fetch("http://localhost:4000/eventos");
+      const data = await response.json();
+      setListaEventos(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getEventos();
+  }, []);
+
   return (
     <div className="grid grid-cols-3 gap-5">
-      {eventos.map((evento) => (
+      {listaEventos?.map((evento) => (
         <div
           key={evento.id}
           className="

@@ -21,6 +21,7 @@ export default function PaginaConvite(props: any) {
   useEffect(() => {
     carregarEvento(params.alias);
   }, [params.alias]);
+  console.log(evento);
 
   return evento?.alias ? (
     <div>
